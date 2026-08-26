@@ -22,9 +22,9 @@ requirements:
     - make
     - pkg-config
   host:
-    - libxcb
-    - xcb-util
-    - xorg-xproto
+    - libxcb {{ libxcb }}
+    - xorg-util-macros ==1.19.0
+    - xorg-xorgproto ==2024.1
 
 test:
   commands:
@@ -38,6 +38,8 @@ about:
   license_family: MIT
   license_file: COPYING
   summary: Port of Xlib XImage and XShmImage functions
+  description: |
+    Port of Xlib XImage and XShmImage functions
 
 extra:
   recipe-maintainers:
