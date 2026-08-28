@@ -17,14 +17,14 @@ build:
 
 requirements:
   build:
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - make
     - pkg-config
   host:
     - libxcb {{ libxcb }}
-    - xcb-util
-    - xorg-xorgproto
+    - xcb-util {{ xcb_util }}
+    - xorg-xorgproto {{ xorg_xorgproto }}
 
 test:
   commands:
